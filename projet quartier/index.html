@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Quartier.css" rel="stylesheet" media="all" type="text/css">
+    <title>Bellecour</title>
+</head>
+<body>
+
+    <nav>
+        <a href="Page_accueil.html">
+        <div class="Logo"><img src="LogoQuartier.png" class="Logo" alt="Chargement"></div>
+        </a>
+
+        <ul>
+            <li><a href="Page_accueil.html">ACCUEIL</a></li>
+            <li><a href="Bellecour.html">BELLECOUR</a></li>
+            <li><a href="Dedans.html">CE QUE L'ON TROUVE</a></li>
+            <li><a href="Contact.html">CONTACT</a></li>
+        </ul>
+        <a href="../FR/Bellecour.html">
+          <div class="LogoFrance"><img src="France.png" class="LogoFrance" alt="Chargement"></div>
+          </a>
+          <a href="../EN/Bellecour.html">
+          <div class="LogoAnglais"><img src="Anglais.png" class="LogoAnglais" alt="Chargement"></div>
+          </a>
+    
+      </nav>
+
+      <div class="conteneur-flexbox">
+        <div class="box1">
+              <p class="click">La Place Bellecour</p>
+              <!--le lien vers la grande image qui sera affichée lors du clic sur la vignette carrée -->
+                  <a href="https://zupimages.net/up/21/43/28fl.jpg" 
+                  data-lightbox="image-1" data-title="La place Bellecour est la place la plus importante de Lyon
+                   et la quatrième plus grande place de France avec une taille de 310 par 200 mètres,
+                    soit environ 62.000 m2. Ses dimensions dépassent celles du Zocalo de Mexico
+                     (44.160 m2 et de la place Rouge de Moscou (23.100m2).
+                      C'est également la place piétonne la plus immense d'Europe,
+                       les véhicules circulent autour de la place. Au centre de la place se trouve une statue en bronze de Louis XIV.
+                  ">
+                      <!--le lien vers la petite image carrée qui sert de vignette -->
+                  <img src="place Bellecour de RMS Lavage.JPG"></a>
+          </div>
+          
+        
+    
+<script src="test.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/lightbox-plus-jquery.js"></script>
+     <style>
+        
+        /* css chargement */
+
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.accueil {
+    height: 100%;
+    width: 100%;
+    background: url(https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil h1 {
+    font-size: 120px;
+    margin-bottom: 450px;
+    text-align: center;
+}
+
+
+/*L'OPACITÉ DE LA VIGNETTE CHANGE LORS DU HOVER*/
+img:hover {
+    opacity: 0.8;
+    transition: opacity 0.9s;
+}
+
+
+/*LE STYLE DU TEXTE CLICK TO ZOOM*/
+.click {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    /* z-index: 10; */
+    color: white;
+    background-color: #0708a8;
+    font-size: 1em;
+    font-family: "Lucida Console", Courier, monospace;
+    opacity: 0;
+    /*opacity 0 car le texte ne doit pas être affiché avant le hover*/
+}
+
+.box:hover .click {
+    opacity: 1;
+    /*le texte passe à opacity 1 et devient visible*/
+    transition: opacity 0.9s;
+}
+
+
+/*flexbox*/
+
+.conteneur-flexbox {
+    max-width: 650px;
+    margin: 100px auto 0 auto;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #838383;
+}
+
+
+
+/*LIGHTBOX*/
+
+body:after {
+    content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/close.png) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/loading.gif) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/prev.png) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/next.png);
+    display: none;
+}
+
+body.lb-disable-scrolling {
+    overflow: hidden;
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: 9999; */
+    background-color: black;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    display: none;
+}
+
+.lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* z-index: 10000; */
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+    /* Image border */
+    border: 4px solid white;
+}
+
+.lightbox a img {
+    border: none;
+}
+
+.lb-outerContainer {
+    position: relative;
+    *zoom: 1;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+    /* Background color behind image.
+     This is visible during transitions. */
+    background-color: white;
+}
+
+/* .lb-outerContainer:after {    //on sait pas a quoi sa sert
+    content: "";
+    display: table;
+    clear: both; 
+} */
+
+.lb-loader {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/loading.gif) no-repeat;
+}
+
+.lb-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* z-index: 10; */
+}
+
+.lb-container>.nav {
+    left: 0;
+}
+
+.lb-nav a {
+    outline: none;
+    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev,
+.lb-next {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/prev.png) left 48% no-repeat;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/next.png) right 48% no-repeat;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    *zoom: 1;
+    width: 100%;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: white;
+    font-family: "work_sans", sans-serif;
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em;
+    font-family: "work_sans", sans-serif;
+}
+
+.lb-data .lb-caption {
+    font-family: "work_sans", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+    color: #4ae;
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999999;
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/265602/close.png) top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.img_minature {
+    width:294px;
+    height:294px;
+    object-fit: cover;
+}
+
+.box1:hover{
+    background: white !important;
+    text-align: center;
+}
+</style>
+</body>
+</html>
