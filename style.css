@@ -1,0 +1,107 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: darksalmon;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150%;
+}
+a:link{
+    color: green;
+    text-decoration: none;
+
+}
+a:visited {
+    color: greenyellow;
+}
+a:hover {
+    color: red;
+    font-style: italic;
+    cursor: progress;
+}
+
+code{
+    font-family: Consolas, "courir new";
+    color: rgb(20, 220, 53);
+    background-color: #9c1d1d;
+    padding: 5px;
+    margin: 5%;
+    font-size: 105%;
+}
+div.basic {
+    /* background-color: darkcyan; */
+    height: 25px;
+    width: 50%;
+    padding: 20px;
+    margin-left: -8px;
+    /* margin-bottom: -10%; */
+    border: 1px solid red
+}
+iframe{
+    border: 5px solid red;
+    height: 100%;
+    width: 100%;
+    margin: 10%;
+    padding: 10px;
+}
+div.un{
+     /* border: 1px solid blue; */
+     border-style: solid;
+     border-color: chartreuse;
+}
+div.deux{
+    /* border: 1px solid blue; */
+    border-style: solid;
+    border-color: royalblue red
+}
+div.trois{
+    /* border: 1px solid blue; */
+    border-style: solid;
+    border-color:rosybrown red blue ;
+
+}
+div.quatre{
+    /* border: 1px solid blue; */
+    border-style: solid;
+    border-color:rosybrown chartreuse red blue;
+}
+#main {
+    border: 1px solid gray;
+    width: 65px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: inherit;
+}
+#main div{
+    width: 100%;
+    height: 100%;
+    transform: translate(25px, 25px) ;
+    transition: width 2s;
+}
+#divtr {
+    transform: scale(1.5,1) rotate(-20deg) translate(25px, 25px) !important;
+}
+#devde {
+    background-image: url("https://media2.ledevoir.com/images_galerie/nwd_536390_391121/image.jpg");
+    transform: skew(20deg , 10deg) !important;
+}
+#divun {
+    transform: matrix(1,-0.3,0,1,1,1) !important;
+    /* matrix (scaleX(), SkewY(), skewX(), scaleY(), translateX(), translateY()) */
+}
+#divun:hover {
+    width: 300px;
+}
+#divun img {
+    height: 100%;
+    width:  100%;
+    margin: 10px;
+}
+#devde img {
+    height: 100%;
+    width: 100%;
+    box-shadow: 3px 3px 3px blue;
+    background-color: brown;
+}

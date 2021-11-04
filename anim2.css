@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+.square{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    animation: move 3s ease 1s infinite normal none running;
+    
+}   
+@keyframes move {
+    O% {
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(150px, 0px);
+    }
+        
+}
+.square-2{
+    background-color: purple;
+    height: 200px;
+    width: 200px;
+    animation-name: move2;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes move2{
+    0%{transform: translate(0,0);}
+    20%{transform: rotate(20deg);}
+    40%{transform: translate(150px,0);}
+    60%{transform: rotate(-145deg);}
+    80%{transform: translateY(150px);}
+}
+.heart{
+    background-color: palevioletred;
+    animation-name: heartbeat;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 200px;
+    transform: rotate(-45deg);
+    animation: heartbeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+.heart::before,.heart::after{
+    content: "";
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+}
+.heart::before{
+    top: -50px;
+    left: 0;
+}
+.heart::after{
+    left: 50px;
+    top: 0;
+}
+@keyframes heartbeat{
+    0%{transform: scale(1) rotate(-45deg);}
+    20%{transform: scale(1.25) rotate(20deg);}
+    40%{transform: scale(1.50)translate(150px,0);}
+    60%{transform: scale(1.75)rotate(-185deg);}
+    80%{transform: scale(2)translateY(150px);}
+
+}

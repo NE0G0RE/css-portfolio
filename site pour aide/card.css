@@ -1,0 +1,144 @@
+/*.container {
+    /* Used to position the stacked cards */
+    /*position: relative;
+/*}
+
+/* .container__card {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    
+    height: 100%;
+    width: 100%;
+    
+    z-index: -1;
+    
+    background-color: rgb(255, 255, 255);
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    
+    transform: rotate(5deg);
+} */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    /*padding: 5px;*/
+    color: blue;
+    overflow: hidden;
+    width: 75%;
+    text-align: center;
+    background-color:red ;
+}
+
+.card__cover {
+    height: 150px;
+    width: 100%;
+    border-radius: 5px ;
+    overflow: hidden;
+}
+.card__cover img{
+    width:100%;
+    height:100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+.card__content {
+    /* Take available height */
+    flex: 1;
+    padding: 15px;
+    position: relative;
+    text-align: justify;
+    bottom: 15px;
+}
+
+.avatar {
+    display: inline-block;
+    vertical-align: center;
+    position: relative;
+    border: 1px yellow;
+    height: 48px;
+    width: 48px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: gray;
+    color: azure;
+    bottom: 20px;
+}
+
+.avatar_letters{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    vertical-align:auto;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text {
+    animation: inherit;
+}
+.background {
+    color: hsl(324, 70%, 45%);
+    animation: wheelHueColor 3s infinite;
+    background-color: currentColor;
+}
+@supports (background-blend-mode: overlay) {
+    .background {
+    background-image: linear-gradient(45deg, white 10%, black 90%);
+    background-blend-mode: overlay;
+    border-radius: 15%;
+    }
+}
+@keyframes wheelHueColor {
+    from, to { color: hsl(324, 70%, 45%); }
+    10%      { color: hsl(360, 65%, 45%); }
+    20%      { color: hsl( 36, 80%, 45%); }
+    30%      { color: hsl( 72, 75%, 35%); }
+    40%      { color: hsl(108, 65%, 35%); }
+    50%      { color: hsl(144, 75%, 35%); }
+    60%      { color: hsl(180, 75%, 35%); }
+    70%      { color: hsl(216, 60%, 45%); }
+    80%      { color: hsl(252, 65%, 50%); }
+    90%      { color: hsl(288, 60%, 40%); }
+}
+
+
+/* misc */
+* { margin: 0; padding: 0; }
+.background {
+    min-height: 1px;
+    display: flex;
+}
+.text {
+    margin: auto;
+    background: rgba(0,0,0,.75);
+    padding: 1px;
+}
