@@ -305,24 +305,29 @@ footer{
     height: 20px;
 }
 
-@media screen and (min-width: 720px) {
-    nav{
+@media screen and (max-width:720px) {
+    nav {
         padding: 15px 10px;
     }
-
     nav ul{
         position: fixed;
         background-color: var(--bg-color);
         flex-direction: column;
-        top: 86px;
-        left: 10%;
+        top:86px;
+        left:10%;
         width: 80%;
         text-align: center;
         transform: translateX(120%);
-        transition: transform O.5s ease-in;
+        transition:transform 0.5s ease-in;
     }
-
-    nav ul li(
-        margin: 8px;
-    )
+    nav ul li{
+        margin:8px;
+            
+    }
+    .burger-menu {
+        display:block;
+    }
+    nav ul.show {
+        transform:translateX(0);
+    }
 }
