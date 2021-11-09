@@ -289,3 +289,16 @@ footer{
     text-align: center;
     margin: 20px 0 0;
 }
+
+.scroll-up{
+    position: fixed;
+    right: 15px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.up-arrow{
+    width: 20px;
+    height: 20px;
+}
+
