@@ -363,5 +363,18 @@ footer{
     .project-container{
         width: 80%;
     }
-    
+    .contact-form-container{
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width:420px){
+    .hero img{
+    }
+    .bio{
+    }
+    .project-container{
+    }
+    .contact-form-container{
+    }
 }
