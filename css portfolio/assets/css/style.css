@@ -153,8 +153,8 @@ nav ul li{
 }
 
 .icon{
-    width: 118px;
-    height: 118px;
+    width: 200px;
+    height: 200px;
 }
 
 .icon-card{
@@ -343,4 +343,25 @@ footer{
         margin-top: 10px;
         width: 100%;
     }
+    .more-about{
+        margin-top: 20px;
+        padding: 10px 35px;
+    }
+    .more-about h2{
+        text-align: center;
+    }
+    .more-about p{
+        text-align: justify;
+    }
+    .icon{
+        width: 118px;
+        height: 118px;
+    }
+    .projects-container{
+        flex-direction: column;
+    }
+    .project-container{
+        width: 80%;
+    }
+    
 }
