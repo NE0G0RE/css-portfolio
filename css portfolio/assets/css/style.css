@@ -330,4 +330,17 @@ footer{
     nav ul.show {
         transform:translateX(0);
     }
+    .hero{
+        margin-top: 5px;
+        flex-direction: column;
+        gap: 5px
+    }
+    .hero img{
+        height: 100%;
+        width: 100%;
+    }
+    .bio{
+        margin-top: 10px;
+        width: 100%;
+    }
 }
