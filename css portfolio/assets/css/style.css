@@ -101,6 +101,8 @@ nav ul li{
 .hero img{
     height: 70%;
     width: 70%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
 
 .bio{
