@@ -55,6 +55,7 @@ nav{
     padding: 15px 35px;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 nav h1{
@@ -304,4 +305,24 @@ footer{
     height: 20px;
 }
 
-/*  */
+@media screen and (min-width: 720px) {
+    nav{
+        padding: 15px 10px;
+    }
+
+    nav ul{
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform O.5s ease-in;
+    }
+
+    nav ul li(
+        margin: 8px;
+    )
+}
