@@ -1,0 +1,909 @@
+.accueil {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil h1 {
+    font-size: 120px;
+    margin-bottom: 450px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* loader */
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex; 
+    justify-content: center;
+    top: 100px;
+}
+.lettre {
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 150px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash {
+    0% {
+        color: #33ffff;
+        text-shadow: 0 0 7px #33ffff;
+    }
+    90% {
+        color: black;
+        text-shadow: none;
+    }
+    100% {
+        color: #33ffff;
+        text-shadow: 0 0 7px #33ffff;
+    }
+}
+
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay: 0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay: 1s;
+}
+
+.fondu-out {
+    opacity: 0;
+    transition: opacity 3s ease-out;
+}
+
+
+.navbar {
+    padding: 0px !important;
+}
+
+.container-fluid{
+    overflow: hidden !important;
+}
+
+
+.LogoAnglais{
+    position: fixed;
+    height: 100px;
+    right: 0%;
+    top: 0%;
+
+}
+.LogoFrance{
+    position: fixed;
+    height: 100px;
+    right: 6%;
+    top: 0%;
+}
+
+
+* {
+    overflow-y: visible;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+  background-color: rgb(175, 175, 175) !important;
+  background: #f2f2f2;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/899595129113964574/Place_Bellecour_Lyon_Panorama.jpg) !important;
+    background-position-y: 70%;
+    background-size: 100%;
+    z-index: 101;
+    padding: 1%;
+    top: 0%;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+    top: 10px;
+}
+nav ul {
+    float: none;
+    left: 26%;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+    top: 10px;
+}
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.767);
+    top: 10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 20px;
+    padding: 8px 15px;
+    top: 10px;
+}
+nav ul li a:hover{
+    color: cyan;
+    border-radius: 1px;   
+}
+nav ul ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+}
+nav ul ul {
+    position: absolute;
+    top: 70px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a {
+    line-height: 50px;
+
+}
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+nav .Logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 200;
+    line-height: 180px;
+    padding-left: 0px;
+    height: 100px;
+}
+
+
+.button11 {
+    position: absolute;
+    left: 38%;
+    top: 200px;
+    height: 25vh;
+    z-index: 2;
+}
+
+.button2{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 0;
+    padding: 5px 20px;
+    transform: skewX(-15deg);
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 15px 15px 0px rgb(0, 233, 221);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.button2:hover{
+    padding-right: 60px;
+    box-shadow: 10px 10px 0px rgb(0, 233, 221);
+    border-radius: 10px;
+}
+
+span.arrow {
+    margin-left: 25px;
+    position: relative;
+    transform: skewX(15deg) !important;
+}
+
+span.arrow i {
+    transform: skewX(15deg);
+    color: white;
+    transition: 0.2s;
+}
+
+span.arrow i:nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    animation-delay: 0.5s;
+}
+
+span.arrow i:nth-child(3) {
+    position: absolute;
+    right: 0;
+    top: -2px;
+    animation-delay: 1s;
+}
+
+.button2:hover i:nth-child(2) {
+    right: -20px;
+}
+
+.button2:hover i:nth-child(3) {
+    right: -40px;
+}
+
+.button2:hover i {
+    animation: color 2s infinite linear;
+}
+
+@keyframes color  {
+    0% {
+        color: white;
+    }
+    50% {
+        color: rgb(0, 233, 221);
+    }
+    100% {
+        color: white;
+    }
+}
+
+
+.container-fluid{
+    background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/899595129113964574/Place_Bellecour_Lyon_Panorama.jpg);
+    background-size: 100%;
+    background-position-y: 198px;
+}
+
+
+.nav-link{
+    font-style: bold;
+    color: white !important;
+    box-shadow: 5px solid rgb(0, 233, 221);
+    background-color: black;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+.slide1{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: -500px;
+    top: 400px;
+    font-size: 1em;
+    height: 220px;
+    width: 700px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    padding: 2px 10px;
+    transform: skewX(0deg);
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 15px 15px 0px black;
+    background-image: url(https://www.lyoncapitale.fr/wp-content/uploads/2014/07/464735-ez-La-grande-Roue-place-bellecour-C-tim-douet_0069-770x433.jpg);
+    background-size: 100%;
+    background-position-x: (-50deg);
+
+}
+
+#text1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 670px;
+    font-size: 40px;
+    top: 10px;
+    box-shadow: 2px solid black;
+    font-style: normal;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+
+}
+
+#text2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 672px;
+    font-size: 40px;
+    top: 50px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 668px;
+    font-size: 40px;
+    top: 90px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 667px;
+    font-size: 40px;
+    top: 125px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 670px;
+    font-size: 40px;
+    top: 163px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+.slide1:hover {
+    left: -10px;
+    animation-duration: 3s;
+    z-index: 101;
+}
+
+#text01{
+    position: absolute;
+    top: 300px;
+    left: 34%;
+    font-size: 25px;
+    background-color: black;
+    color: white !important;
+    font-style: italic;
+    box-shadow: 5px 5px 0px rgb(0, 233, 221);
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.slide2{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: -500px;
+    top: 700px;
+    font-size: 1em;
+    height: 220px;
+    width: 700px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    padding: 2px 10px;
+    transform: skewX(0deg);
+    cursor: pointer;
+    transition: 0.2s;   
+    box-shadow: 15px 15px 0px black;
+    background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/902201556122894376/Pont_Bonaparte.JPG);
+    background-position: 25%;
+    background-size: 100%;
+}
+
+#text6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    position: absolute;
+    left: 670px;
+    font-size: 40px;
+    top: 0px;
+    box-shadow: 2px solid black;
+    font-style: normal;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text7 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 668px;
+    font-size: 40px;
+    top: 45px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text8 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 669px;
+    font-size: 40px;
+    top: 90px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text9 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    left: 670px;
+    font-size: 40px;
+    top: 135px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+
+.slide2:hover {
+    left: -10px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    z-index: 101;
+}
+
+.slide3{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    right: -500px;
+    top: 400px;
+    font-size: 1em;
+    height: 220px;
+    width: 700px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    padding: 2px 10px;
+    transform: skewX(0deg);
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: -15px 15px 0px black;
+    background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/902541051250757632/Statue_Equestre_de_Louis_XIV.JPG);
+    background-size: 100%;
+    background-position-y: -50px;
+    z-index: 101;
+
+}
+
+#text10 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 670px;
+    font-size: 40px;
+    top: -10px;
+    box-shadow: 2px solid black;
+    font-style: normal;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+
+}
+
+#text11 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 670px;
+    font-size: 40px;
+    top: 22px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text12 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 669px;
+    font-size: 40px;
+    top: 55px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text13 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 673px;
+    font-size: 40px;
+    top: 92px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text14 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 670px;
+    font-size: 40px;
+    top: 125px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text15 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 673px;
+    font-size: 40px;
+    top: 160px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+.slide3:hover {
+    right: -10px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+.slide4{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    right: -500px;
+    top: 700px;
+    font-size: 1em;
+    height: 220px;
+    width: 700px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    padding: 2px 10px;
+    transform: skewX(0deg);
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: -15px 15px 0px black;
+    background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/902541760868278332/InterContinental_Lyon_Hotel_Dieu_du_pont_de_la_Guillotiere2.JPG.JPG);
+    background-size: 100%;
+    background-position-y: -110px;
+
+}
+
+#text16 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 670px;
+    font-size: 40px;
+    top: -10px;
+    box-shadow: 2px solid black;
+    font-style: normal;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+
+}
+
+#text17 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 670px;
+    font-size: 40px;
+    top: 42px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text18 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 673px;
+    font-size: 40px;
+    top: 85px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text19 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 676px;
+    font-size: 40px;
+    top: 125px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+#text20 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: absolute;
+    right: 675px;
+    font-size: 40px;
+    top: 163px;
+    color: white !important;
+    -webkit-text-stroke: 2px black;
+}
+
+
+.slide4:hover {
+    right: -10px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    z-index: 101;
+}
+
+.TitreActu {
+    position: absolute;
+    top: 380px;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    right: 44%;
+    color:white;
+    text-shadow: 2px 2px 1px black;
+}
+
+.textGilet .TextManif {
+    justify-content: space-between;
+    display: block;
+}
+
+.TextGilet {
+    font-size: 25px;
+    position: absolute;
+    top: 500px;
+    left: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.5s;
+    text-shadow: 2px 2px 1px black;
+    font-family: 'Teko', sans-serif;
+}
+
+.TextGilet:hover{
+    color: #000;
+    box-shadow: 0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0,
+                0 0 80px #0f0,
+                0 0 160px #0f0;
+    
+
+}
+
+.TextGilet {
+    filter: hue-rotate(80deg);
+}
+.TextGilet::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;   
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+    
+}
+
+.TextGilet:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0f0, 5px 0 0 #0f0;
+    transition-delay: 0s,0.5s,1s,1s;
+    
+}
+
+.TextGilet::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;   
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0,
+                -5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+    
+}
+
+.TextGilet:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0, 
+                -5px 0 0 #0f0;
+    transition-delay: 0s,0.5s,1s,1s;
+    
+}
+
+.TextGilet:hover{
+    color: #000;
+    box-shadow: 0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0,
+                0 0 80px #0f0,
+                0 0 160px #0f0;
+                
+}
+
+.TextManif {
+    font-size: 25px;
+    position: absolute;
+    top: 500px;
+    right: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    text-shadow: 2px 2px 0 black;
+    font-family: 'Teko', sans-serif;
+} 
+
+.TextManif:hover{
+    color: #000;
+    box-shadow: 0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0,
+                0 0 80px #0f0,
+                0 0 160px #0f0;
+
+}
+
+.TextManif {
+    filter: hue-rotate(80deg);
+}
+
+.box1 a span {
+    position: relative;
+    z-index: 100;
+}
+
+.TextManif::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;   
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+
+.TextManif:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0f0, 5px 0 0 #0f0;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+
+.TextManif::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;   
+    transform: translateY(-50%);
+    width: 40px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0,
+                -5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+
+.TextManif:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0, 
+                -5px 0 0 #0f0;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+
+.TextManif:hover{
+    color: #000;
+    box-shadow: 0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0,
+                0 0 80px #0f0,
+                0 0 160px #0f0;
+
+}
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0 0.25);
+    background: #00e9dd;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #00e9dd;
+    border: 2px solid black;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border: 2px solid black;
+    background-color: #0f0;
+    background: #0f0 !important;
+}
+
+footer{
+    padding: 12px;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+@page {
+    margin: 10%
+}
+
+@media print{
+    
+}

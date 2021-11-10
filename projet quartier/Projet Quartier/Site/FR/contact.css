@@ -1,0 +1,174 @@
+.accueil {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil h1 {
+    font-size: 120px;
+    margin-bottom: 450px;
+    text-align: center;
+    justify-content: center;
+}
+
+.fondu-out {
+    opacity: 0;
+    transition: opacity 3s ease-out;
+}
+
+
+.navbar {
+    padding: 0px !important;
+}
+
+.container-fluid{
+    overflow: hidden !important;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/899595129113964574/Place_Bellecour_Lyon_Panorama.jpg) !important;
+    background-position-y: 70%;
+    background-size: 100%;
+    z-index: 101;
+    padding: 1%;
+    top: 0%;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+    top: 10px;
+}
+nav ul {
+    float: none;
+    left: 26%;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+    top: 10px;
+}
+nav ul li{
+    float: left;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.767);
+    top: 10px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 20px;
+    padding: 8px 15px;
+    top: 10px;
+}
+nav ul li a:hover{
+    color: cyan;
+    border-radius: 1px;   
+}
+nav ul ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+}
+nav ul ul {
+    position: absolute;
+    top: 70px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a {
+    line-height: 50px;
+
+}
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+nav .Logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 200;
+    line-height: 180px;
+    padding-left: 0px;
+    height: 100px;
+}
+
+
+.LogoAnglais{
+    position: fixed;
+    height: 100px;
+    right: 0%;
+    top: 0%;
+
+}
+.LogoFrance{
+    position: fixed;
+    height: 100px;
+    right: 6%;
+    top: 0%;
+}
+
+
+body{
+    background-color: rgb(175, 175, 175) !important;
+    background: #f2f2f2;
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0 0.25);
+    background: #00e9dd;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #00e9dd;
+    border: 2px solid black;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border: 2px solid black;
+    background-color: #0f0;
+    background: #0f0 !important;
+}
+
+footer{
+    padding: 12px;
+    text-align: center;
+    margin: 20px 0 0;
+}

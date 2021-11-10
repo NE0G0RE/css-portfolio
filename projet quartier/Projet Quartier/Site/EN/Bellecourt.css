@@ -1,0 +1,294 @@
+.navbar {
+  padding: 0px !important;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  background-image: url(https://cdn.discordapp.com/attachments/894556426964463666/899595129113964574/Place_Bellecour_Lyon_Panorama.jpg) !important;
+  background-position-y: 70%;
+  background-size: 100%;
+  z-index: 101;
+  top: 0%;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+  top: 10px;
+}
+nav ul {
+  float: none;
+  left: 26%;
+  list-style: none;
+  margin-right: 40px;
+  position: relative;
+  top: 10px;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.767);
+  top: 10px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 20px;
+  padding: 8px 15px;
+  top: 10px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 1px;   
+}
+nav ul ul li a:hover{
+  color: cyan;
+  box-shadow: none;
+}
+nav ul ul {
+  position: absolute;
+  top: 70px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a {
+  line-height: 50px;
+
+}
+nav ul ul ul li {
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+
+nav .Logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 180px;
+  padding-left: 0px;
+  height: 100px;
+}
+
+.nav-link{
+  font-style: bold;
+  color: white !important;
+  box-shadow: 2px solid rgb(0, 233, 221);
+  background-color: black;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Lobster', cursive;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.LogoAnglais{
+  position: fixed;
+  height: 100px;
+  right: 0%;
+  top: 0%;
+
+}
+.LogoFrance{
+  position: fixed;
+  height: 100px;
+  right: 6%;
+  top: 0%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(175, 175, 175 );
+}
+
+.flip-box{
+  text-align: center;
+  margin-top: 10%;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  align-items: center;
+  left: 5%;
+}
+
+.flip-box1 {
+  background-color: transparent;
+  width: 30%;
+  height: 470px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+  background-image: url(place\ Bellecour\ de\ RMS\ Lavage.JPG);
+  background-size: cover;
+  background-position: 20% 75%;
+}
+
+.flip-box-back {
+  background-color: aliceblue ;
+  opacity: 0.6;
+  color: black;
+  transform: rotateY(180deg);
+  font-size: 160% 
+}
+
+.flip-box2{
+  text-align: center;
+  margin-top: -32%;
+  margin-left: 34%;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  align-items: center;
+  left: 5%;
+}
+
+.flip-box12 {
+  background-color: transparent;
+  width: 40%;
+  height: 470px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box2:hover .flip-box-inner2 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front2, .flip-box-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front2 {
+  background-color: #bbb;
+  color: black;
+  background-image: url(Statue\ Equestre\ de\ Louis\ XIV.JPG);
+  background-size: cover;
+  background-position: 20% 75%;
+  background-position-x: 55%;
+}
+
+.flip-box-back2 {
+  background-color: aliceblue ;
+  opacity: 0.6;
+  transform: rotateY(180deg);
+  font-size: 160% 
+}
+
+.flip-box3{
+  text-align: center;
+  margin-top: -32%;
+  margin-left: 65%;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  align-items: center;
+  left: 5%;
+}
+
+.flip-box13 {
+  background-color: transparent;
+  width: 80%;
+  height: 470px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box3:hover .flip-box-inner3 {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front3, .flip-box-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front3 {
+  background-color: #bbb;
+  color: black;
+  background-image: url(Bellecour1.JPG);
+  background-size: cover;
+  background-position: 20% 75%;
+}
+
+.flip-box-back3 {
+  background-color: aliceblue ;
+  opacity: 0.6;
+  transform: rotateY(180deg);
+  font-size: 160% 
+}
+
+
+
+.AllFlip{
+  margin-top: 15%;
+}
